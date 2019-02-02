@@ -6,6 +6,7 @@
     "@material-ui/core": "^3.9.1",
     "@material-ui/icons": "^3.0.2",
     "node-sass": "^4.11.0",
+    "prop-types": "^15.6.2",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-router-dom": "^4.3.1",

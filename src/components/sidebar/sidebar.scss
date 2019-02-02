@@ -1,0 +1,27 @@
+.sidebar{
+    padding-left: 10px;
+
+    &__user{
+        width: 100%;
+        height: 220px;
+        text-align: center;
+        
+    
+        .avatar{
+            width: 110px;
+            height: 110px;
+            box-sizing: border-box;
+            position: relative;
+            top: 25%;
+        }
+    }
+    &__list{
+        color: #e9ab00;
+        .MuiTypography-subheading-140{
+            color: #a5a5a5 !important;
+        }
+        .material-icons{
+            color: #e0bd5b !important;
+        }
+    }
+}

@@ -5,16 +5,17 @@ import Content from '../content/content';
 
 import Grid from '@material-ui/core/Grid';
 
+
 class Dashboard extends Component{
     
     render(){
         return(
             <div>
                 <Grid container spacing={24}>
-                    <Grid item sm={4}>
-                        <Sidebar/>
+                    <Grid item md={2}>
+                        <Sidebar className="sidebar"/>
                     </Grid>
-                    <Grid item sm={8}>
+                    <Grid item md={10} xs={12}>
                         <Content/>
                     </Grid>
                 </Grid>
