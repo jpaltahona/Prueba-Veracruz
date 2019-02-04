@@ -1,12 +1,13 @@
 import React, {Component} from 'react';
 import Toolbar from '@material-ui/core/Toolbar';
 import './content.scss';
+
 import Icon from '@material-ui/core/Icon'
 import Avatar from '@material-ui/core/Avatar';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import Typography from '@material-ui/core/Typography';
-
+import Tables  from './table/table.js';
 
 class Content extends Component{
     constructor(){
@@ -46,7 +47,13 @@ class Content extends Component{
                         <MenuItem>Logout</MenuItem>
                     </Menu>
                 </div>
-                </Toolbar> 
+                </Toolbar>
+                <div className="tables">
+                    <div className="tables__list">
+                        <Tables/>
+                    </div>
+                    
+                </div>
             </div>
         )
     }

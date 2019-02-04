@@ -49,3 +49,14 @@
     padding: 0px !important;
     overflow: hidden;
 }
+.tables{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 15px;
+
+    &__list{
+        width: 99%;
+        
+        margin:  0 auto;
+    }
+}

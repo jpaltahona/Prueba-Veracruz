@@ -1,0 +1,45 @@
+.cell{
+    text-align: center !important;
+    border: none !important;
+}
+.status{
+    width: 126%;
+    height: 80%;
+    background-color: #541919;
+    color: white;
+    text-align: center;
+    padding: 3px;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+.head-table{
+    background-color: #ececec;
+}
+.search{
+    width: 100%;
+    margin: 10px;
+
+    .form{
+        margin: 10px;
+        .MuiInput-underline-206:before{
+            border: none !important;
+        }
+    
+}
+}
+.form-filter{
+    display: flex;
+    width: 10%;
+    margin: 15px !important;
+    background-color: #cbcecd;
+    border-radius: 10px;
+    padding: 5px !important;
+
+    .MuiInput-underline-206:before{
+        border: none !important;
+    }
+}
+.table-conten{
+    position: relative;
+    top: 40px;
+}
