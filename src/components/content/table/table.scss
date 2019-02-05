@@ -29,15 +29,33 @@
     
 }
 }
-.form-filter{
+
+.from{
     display: flex;
+    padding: 5px !important;
+     
+    &__filter{
     width: 10%;
     margin: 15px !important;
-    background-color: #cbcecd;
-    border-radius: 10px;
-    padding: 5px !important;
 
-    .MuiInput-underline-206:before{
-        border: none !important;
+    border-radius: 10px;
+    
+    
+    .MuiInput-root-176 {
+        text-align: center;
+        position: relative;
+        width: 100%;
+        background: #dedcdc;
+        border-radius: 7px;
+        overflow: hidden;
+        color: #656565;
+
+        }
     }
+}
+.MuiInput-underline-206:before{
+    border: none !important;
+}
+.MuiInput-underline-180:before{
+    display: none !important;
 }

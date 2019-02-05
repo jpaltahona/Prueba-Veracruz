@@ -26,13 +26,13 @@ class Tables extends Component{
         }
     }
 
-    handleChange = event => {
+    Selecte = event => {
         this.setState({value: event.target.value });
-         
     }
-   
-    myFunction() {
-        var input, filter, table, tr, td, i, txtValue;
+    otherSelecte = event =>{
+        this.setState({status: event.target.value });
+    }
+    fitrar() { var input, filter, table, tr, td, i, txtValue;
         input = document.getElementById("input");
         filter = input.value.toUpperCase();
         table = document.getElementById("myTable");
@@ -80,38 +80,40 @@ class Tables extends Component{
                     </FormControl>
                     <FormControl className="form">
                         <InputLabel>Search By Pedimento</InputLabel>
-                        <Input id="input" onChange={this.myFunction} placeholder="ABC24XY35" endAdornment={
+                        <Input id="input" onChange={this.fitrar} placeholder="ABC24XY35" endAdornment={
                             <InputAdornment position="end">
                                 <Icon>search</Icon>
                             </InputAdornment>}/>
                     </FormControl>
                </div>
 
-               <div>
-               <FormControl className="form-filter">
-                    <Select value={this.state.value}
-                    onChange={this.handleChange}
-                    input={<Input name="value" id="value" />}
-                    >
-                    {containers.map(option => (
-                    <MenuItem key={option.id} value="uno">
-                        {option.date}
-                    </MenuItem>
-                    ))}
-                    </Select>
-                </FormControl>        
-                <FormControl className="form-filter">       
-                        <Select value={this.state.status}
-                        onChange={this.handleChange}
-                        input={<Input name="status" id="status" />}
+               <div className="from">
+                    <div className="from__filter" >
+                        <InputLabel>Date</InputLabel><br/>
+                        <Select value={this.state.value}
+                        onChange={this.Selecte}
+                        input={<Input name="value" id="value" />}
                         >
                         {containers.map(option => (
-                            <MenuItem key={option.id} value="uno">
-                                {option.status}
-                            </MenuItem>
+                        <MenuItem key={option.id} value={option.date}>
+                            {option.date}
+                        </MenuItem>
                         ))}
                         </Select>
-                </FormControl>
+                    </div>
+                    
+                    <div className="from__filter">
+                        <InputLabel>Status</InputLabel><br/>     
+                        <Select value={this.state.status}
+                        onChange={this.otherSelecte}
+                        input={<Input name="status" id="status" />}
+                        >
+                        <MenuItem value="Planet">Planet</MenuItem>
+                        <MenuItem value="In position">In position</MenuItem>
+                        <MenuItem value="Complete Locked">Complete Locked</MenuItem>
+                        
+                        </Select>
+                    </div>
                </div>
                 <section>
                     <Table id="myTable">
