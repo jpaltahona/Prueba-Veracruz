@@ -114,9 +114,6 @@ class Tables extends Component{
                 </FormControl>
                </div>
                 <section>
-
-                <h2>My Customers</h2>
-
                     <Table id="myTable">
                         <TableHead>
                             <TableRow>
