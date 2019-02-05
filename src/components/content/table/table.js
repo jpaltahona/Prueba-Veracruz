@@ -70,14 +70,17 @@ class Tables extends Component{
         return(
            <div>
                <div className="search">
-                    <FormControl className="form">
-                        <InputLabel>Search By Container</InputLabel>
-                        <Input placeholder="ABC24XY35" endAdornment={
-                            <InputAdornment position="end">
-                                <Icon>search</Icon>
-                            </InputAdornment>
-                        }/>
-                    </FormControl>
+                  {/*
+                      <FormControl className="form">
+                      <InputLabel>Search By Container</InputLabel>
+                      <Input placeholder="ABC24XY35" endAdornment={
+                          <InputAdornment position="end">
+                              <Icon>search</Icon>
+                          </InputAdornment>
+                      }/>
+                
+                  </FormControl>
+                    */}  
                     <FormControl className="form">
                         <InputLabel>Search By Pedimento</InputLabel>
                         <Input id="input" onChange={this.fitrar} placeholder="ABC24XY35" endAdornment={
