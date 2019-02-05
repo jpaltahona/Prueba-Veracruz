@@ -115,13 +115,13 @@ class Tables extends Component{
                </div>
                 <section>
                     <Table id="myTable">
-                        <TableHead>
+                        <TableHead className="head-table">
                             <TableRow>
-                                <TableCell>Pedimineto</TableCell>
-                                <TableCell>Container ID</TableCell>
-                                <TableCell>Date</TableCell>
-                                <TableCell>Status</TableCell>
-                                <TableCell></TableCell>
+                                <TableCell className="cell">Pedimineto</TableCell>
+                                <TableCell className="cell">Container ID</TableCell>
+                                <TableCell className="cell">Date</TableCell>
+                                <TableCell className="cell">Status</TableCell>
+                                <TableCell className="cell"></TableCell>
                             </TableRow>
                         </TableHead>
                         <TableBody>{container}</TableBody>
