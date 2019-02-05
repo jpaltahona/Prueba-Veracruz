@@ -54,7 +54,7 @@ class Tables extends Component{
     render(){
         const container = this.state.containers.map((container, i) => {
             return(
-                <tr key={container.id}>
+                <tr key={container.id} className="animated fadeInDown">
                     <TableCell className="cell">{container.title}</TableCell>
                     <TableCell className="cell">{container.id}</TableCell>
                     <TableCell className="cell">{container.date} - {container.hour}</TableCell>
@@ -63,7 +63,7 @@ class Tables extends Component{
                         <Button variant="contained" size="medium" >
                             <Icon>search</Icon> View Details
                         </Button>
-                        </TableCell>
+                    </TableCell>
                 </tr>
             )
         });
@@ -72,14 +72,14 @@ class Tables extends Component{
                <div className="search">
                     <FormControl className="form">
                         <InputLabel>Search By Container</InputLabel>
-                        <Input id="input" onChange={this.myFunction} placeholder="ABC24XY35" endAdornment={
+                        <Input placeholder="ABC24XY35" endAdornment={
                             <InputAdornment position="end">
                                 <Icon>search</Icon>
                             </InputAdornment>
-                            }/>
+                        }/>
                     </FormControl>
                     <FormControl className="form">
-                        <InputLabel>Search By Container</InputLabel>
+                        <InputLabel>Search By Pedimento</InputLabel>
                         <Input id="input" onChange={this.myFunction} placeholder="ABC24XY35" endAdornment={
                             <InputAdornment position="end">
                                 <Icon>search</Icon>
@@ -93,11 +93,11 @@ class Tables extends Component{
                     onChange={this.handleChange}
                     input={<Input name="value" id="value" />}
                     >
-                        {containers.map(option => (
-                            <MenuItem key={option.id} value="uno">
-                                {option.date}
-                            </MenuItem>
-                        ))}
+                    {containers.map(option => (
+                    <MenuItem key={option.id} value="uno">
+                        {option.date}
+                    </MenuItem>
+                    ))}
                     </Select>
                 </FormControl>        
                 <FormControl className="form-filter">       
@@ -105,11 +105,11 @@ class Tables extends Component{
                         onChange={this.handleChange}
                         input={<Input name="status" id="status" />}
                         >
-                            {containers.map(option => (
-                                <MenuItem key={option.id} value="uno">
-                                    {option.status}
-                                </MenuItem>
-                            ))}
+                        {containers.map(option => (
+                            <MenuItem key={option.id} value="uno">
+                                {option.status}
+                            </MenuItem>
+                        ))}
                         </Select>
                 </FormControl>
                </div>
@@ -117,7 +117,7 @@ class Tables extends Component{
                     <Table id="myTable">
                         <TableHead className="head-table">
                             <TableRow>
-                                <TableCell className="cell">Pedimineto</TableCell>
+                                <TableCell className="cell">Pedimento</TableCell>
                                 <TableCell className="cell">Container ID</TableCell>
                                 <TableCell className="cell">Date</TableCell>
                                 <TableCell className="cell">Status</TableCell>
@@ -125,14 +125,9 @@ class Tables extends Component{
                             </TableRow>
                         </TableHead>
                         <TableBody>{container}</TableBody>
-                   
                     </Table>
-
                 </section>
-              
-
-              
-           </div>
+            </div>
         )
     }
 }
